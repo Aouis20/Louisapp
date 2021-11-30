@@ -96,6 +96,10 @@ const App = () => {
               <View style={styles.centeredView}>
                 <View style={styles.modalView}>
                   <Text style={styles.modalText}>{state.selected.poster_path}</Text>
+                  <Image
+                    style={styles.principal_image}
+                    source={{uri:getImage(item.poster_path)}}
+                  />
                   <Pressable
                     style={[styles.button, styles.buttonClose]}
                     onPress={() => setModalVisible(!modalVisible)}
