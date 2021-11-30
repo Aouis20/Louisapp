@@ -93,9 +93,8 @@ const App = () => {
                 setModalVisible(!modalVisible);
               }}
             >
-              <View style={styles.centeredView}>
                 <View style={styles.modalView}>
-                  <Text style={styles.modalText}>{state.selected.poster_path}</Text>
+                  <Text style={styles.modalText}>{item.title}</Text>
                   <Image
                     style={styles.principal_image}
                     source={{uri:getImage(item.poster_path)}}
@@ -104,10 +103,9 @@ const App = () => {
                     style={[styles.button, styles.buttonClose]}
                     onPress={() => setModalVisible(!modalVisible)}
                   >
-                    <Text style={styles.textStyle}>Hide Modal</Text>
+                    <Text style={styles.textStyle}>Fermer</Text>
                   </Pressable>
                 </View>
-              </View>
             </Modal>
 
             {/* FILM */}
@@ -224,7 +222,8 @@ const styles = StyleSheet.create({
   textStyle: {
     color: "white",
     fontWeight: "bold",
-    textAlign: "center"
+    textAlign: "center",
+    borderRadius: 20,
   },
   modalText: {
     marginBottom: 15,
