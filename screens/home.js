@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet,Text,View} from 'react-native';
 
-const Home = () => {
+const Home = ({navigation}) => {
     return (
         <View style={StyleSheet.container}>
             <Text>This is Home</Text>
